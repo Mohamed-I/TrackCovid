@@ -1,0 +1,144 @@
+.c_text1{
+    color: white;
+    padding-top: 10px;
+    font-family: 'KacstOne', serif;
+    font-weight: bold;
+}
+
+#c_text2{
+    color: red;
+    font-family: 'KacstOne', serif;
+    font-weight: bold;
+    font-size: 18px;
+    background:yellow;
+    border-radius: 5px;
+}
+
+.c_text4{
+    color: white;
+    font-family: 'KacstOne', serif;
+    font-weight: bold;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.table_header_font{
+    font-family: 'KacstOne', serif;
+    font-size: 18px;
+    text-align: right;
+}
+
+.date_time{
+    max-height: 75px;
+    max-width: 75px;
+    padding-top: 30px;
+    color: white;
+    font-size: 20px;
+}
+
+.all_background {
+    background: black;
+    opacity: 0.7;
+}
+
+.tt{
+padding: 0px;
+margin: 0px;
+}
+
+.font_18{font-size: 18px;}
+
+.font_181{font-size: 18px;}
+
+.tx{
+    background: black;
+    opacity: .8;
+}
+
+#tc{
+    font-family: 'KacstOne', serif;
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    top: 50px;
+    right: 0px
+    margin: 0px;
+    padding: 0px;
+}
+
+#tc1{
+    font-family: 'KacstOne', serif;
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    top: 50px;
+    right: 0px
+}
+
+#tc2{
+    font-family: 'KacstOne', serif;
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    top: 50px;
+    right: 0px
+}
+
+#tc3{
+    font-family: 'KacstOne', serif;
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    top: 50px;
+    right: 0px
+}
+
+#tc4{
+    font-family: 'KacstOne', serif;
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    top: 50px;
+    right: 0px
+}
+
+#tc5{
+    font-family: 'KacstOne', serif;
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    top: 50px;
+    right: 0px
+}
+
+#tc6{
+    font-family: 'KacstOne', serif;
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    top: 50px;
+    right: 0px
+}
+
+#tc7{
+    font-family: 'KacstOne', serif;
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    top: 65px;
+    right: 0px
+    margin: 0px;
+    padding: 0px;
+}
+
+.blinking{ animation:blinkingText 1.2s infinite; }
+
+@keyframes blinkingText{
+    0%{     color: (168, 50, 54);    }
+    49%{    color: (168, 50, 54); }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: (168, 50, 54);    }
+}
+
+

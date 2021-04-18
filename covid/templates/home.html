@@ -1,0 +1,389 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for x in new_data[1:] %}
+        {% if x[2] not in countries%}
+            <tbody >
+                <tr class="text-right">
+                    <td class="font_18">{{ x[10] }}</td>                                                            <!--- TotalTests ---->
+                    <td class="font_18">{{ x[9] }}</td>                                                             <!--- Serious ---->
+                    <td class="font_18">{{ x[8] }}</td>                                                             <!--- ActiveCases ---->
+                    <td class="text-success font_18" >{{ x[7] }}</td>                                               <!--- TotalRecovered ---->
+                    <td class="text-danger font_18" >{{ x[6] }}</td>                                                <!--- TotalDeaths ---->
+                    <td class="text-danger font_181 blinking" >{{ x[5] }}</td>                                      <!--- NewDeaths ---->
+                    <td class="font_18">{{ x[4] }}</td>                                                             <!--- NewCases ---->
+                    <td class="font_18">{{ x[3] }}</td>                                               <!--- TotalCases---->
+                    <td class="text-right" style="font-weight: bold; color: #5a64d1;">{{ x[2] }}</td>               <!--- Country---->
+                 </tr>
+            </tbody>
+        {%endif%}
+    {% endfor%}
+{% endblock %}
+
+
+
+{% block sudan_cases %}
+    {% for x in new_data[2:] %}
+        {% if x[2] == 'Sudan' %}
+            <td class="text-center" >{{x[3]}}</td>
+            <td></td>
+        {%endif%}
+    {%endfor%}
+{% endblock sudan_cases %}
+
+{% block sudan_new_cases %}
+{% for x in new_data[2:] %}
+    {% if x[2] == 'Sudan' %}
+        <td class="text-center" >{{x[4]}}</td>
+        <td></td>
+    {%endif%}
+    {%endfor%}
+{% endblock sudan_new_cases %}
+{% block sudan_hell %}
+{% for x in new_data[2:] %}
+    {% if x[2] == 'Sudan' %}
+        <td class="text-center" >{{x[7]}}</td>
+        <td></td>
+    {%endif%}
+    {%endfor%}
+{% endblock sudan_hell %}
+{% block sudan_death %}
+{% for x in new_data[2:] %}
+    {% if x[2] == 'Sudan' %}
+        {%if x[5]%}
+            <td class="invalid text-center" >{{x[6]}}</td>
+            <td class="text-danger text-center font_181 blinking" style="max-width: 20px;">{{x[5]}}</td>
+        {%else%}
+            <td class="invalid text-center" >{{x[6]}}</td>
+            <td></td>
+        {%endif%}
+    {%endif%}
+    {%endfor%}
+{% endblock sudan_death %}
+
+<!---'South Sudan'------>
+
+{% block south_sudan_cases %}
+    {% for x in new_data[2:] %}
+    {% if x[2] == 'South Sudan' %}
+        <td class="text-center" >{{x[3]}}</td>
+        <td></td>
+    {%endif%}
+    {%endfor%}
+{% endblock south_sudan_cases %}
+
+{% block south_sudan_new_cases %}
+{% for x in new_data[2:] %}
+    {% if x[2] == 'South Sudan' %}
+        <td class="text-center" >{{x[4]}}</td>
+        <td></td>
+    {%endif%}
+    {%endfor%}
+{% endblock south_sudan_new_cases %}
+
+{% block south_sudan_hell %}
+{% for x in new_data[2:] %}
+    {% if x[2] == 'South Sudan' %}
+        <td class="text-center" >{{x[7]}}</td>
+        <td></td>
+    {%endif%}
+    {%endfor%}
+{% endblock south_sudan_hell %}
+
+{% block south_sudan_death %}
+{% for x in new_data[2:] %}
+    {% if x[2] == 'South Sudan' %}
+        {%if x[5]%}
+            <td class="invalid text-center" >{{x[6]}}</td>
+            <td class="text-danger text-center font_181 blinking" style="max-width: 20px;">{{x[5]}}</td>
+        {%else%}
+            <td class="invalid text-center" >{{x[6]}}</td>
+            <td></td>
+        {%endif%}
+    {%endif%}
+    {%endfor%}
+{% endblock south_sudan_death %}
+
+
+
+
+
+<!---'car'------>
+
+{% block car_cases %}
+    {% for x in new_data[2:] %}
+    {% if x[2] == 'CAR' %}
+        <td class="text-center" >{{x[3]}}</td>
+        <td></td>
+    {%endif%}
+    {%endfor%}
+{% endblock car_cases %}
+
+{% block car_new_cases %}
+{% for x in new_data[2:] %}
+    {% if x[2] == 'CAR' %}
+        <td class="text-center" >{{x[4]}}</td>
+        <td></td>
+    {%endif%}
+    {%endfor%}
+{% endblock car_new_cases %}
+
+{% block car_hell %}
+{% for x in new_data[2:] %}
+    {% if x[2] == 'CAR' %}
+        <td class="text-center" >{{x[7]}}</td>
+        <td></td>
+    {%endif%}
+    {%endfor%}
+{% endblock car_hell %}
+
+{% block car_death %}
+{% for x in new_data[2:] %}
+    {% if x[2] == 'CAR' %}
+        {%if x[5]%}
+            <td class="invalid text-center" >{{x[6]}}</td>
+            <td class="text-danger text-center font_181 blinking" style="max-width: 20px;">{{x[5]}}</td>
+        {%else%}
+            <td class="invalid text-center" >{{x[6]}}</td>
+            <td></td>
+        {%endif%}
+    {%endif%}
+    {%endfor%}
+{% endblock car_death %}
+
+
+<!---'Chad'------>
+
+{% block chad_cases %}
+    {% for x in new_data[2:] %}
+    {% if x[2] == 'Chad' %}
+        <td class="text-center" >{{x[3]}}</td>
+        <td></td>
+    {%endif%}
+    {%endfor%}
+{% endblock chad_cases %}
+
+{% block chad_new_cases %}
+{% for x in new_data[2:] %}
+    {% if x[2] == 'Chad' %}
+        <td class="text-center" >{{x[4]}}</td>
+        <td></td>
+    {%endif%}
+    {%endfor%}
+{% endblock chad_new_cases %}
+
+{% block chad_hell %}
+{% for x in new_data[2:] %}
+    {% if x[2] == 'Chad' %}
+        <td class="text-center" >{{x[7]}}</td>
+        <td></td>
+    {%endif%}
+    {%endfor%}
+{% endblock chad_hell %}
+
+{% block chad_death %}
+{% for x in new_data[2:] %}
+    {% if x[2] == 'Chad' %}
+        {%if x[5]%}
+            <td class="invalid text-center" >{{x[6]}}</td>
+            <td class="text-danger text-center font_181 blinking" style="max-width: 20px;">{{x[5]}}</td>
+        {%else%}
+            <td class="invalid text-center" >{{x[6]}}</td>
+            <td></td>
+        {%endif%}
+    {%endif%}
+    {%endfor%}
+{% endblock chad_death %}
+
+
+
+
+
+
+<!---'Libya'------>
+
+{% block libya_cases %}
+    {% for x in new_data[2:] %}
+    {% if x[2] == 'Libya' %}
+        <td class="text-center" >{{x[3]}}</td>
+        <td></td>
+    {%endif%}
+    {%endfor%}
+{% endblock libya_cases %}
+
+{% block libya_new_cases %}
+{% for x in new_data[2:] %}
+    {% if x[2] == 'Libya' %}
+        <td class="text-center" >{{x[4]}}</td>
+        <td></td>
+    {%endif%}
+    {%endfor%}
+{% endblock libya_new_cases %}
+
+{% block libya_hell %}
+    {% for x in new_data[2:] %}
+        {% if x[2] == 'Libya' %}
+            <td class="text-center" >{{x[7]}}</td>
+        <td></td>
+        {%endif%}
+    {%endfor%}
+{% endblock libya_hell %}
+
+{% block libya_death %}
+{% for x in new_data[2:] %}
+    {% if x[2] == 'Libya' %}
+        {%if x[5]%}
+            <td class="invalid text-center" >{{x[6]}}</td>
+            <td class="text-danger text-center font_181 blinking" style="max-width: 20px;">{{x[5]}}</td>
+        {%else%}
+            <td class="invalid text-center" >{{x[6]}}</td>
+            <td></td>
+        {%endif%}
+    {%endif%}
+    {%endfor%}
+{% endblock libya_death %}
+
+
+
+
+
+
+<!---'Egypt'------>
+
+{% block egypt_cases %}
+    {% for x in new_data[2:] %}
+    {% if x[2] == 'Egypt' %}
+        <td class="text-center" >{{x[3]}}</td>
+        <td></td>
+    {%endif%}
+    {%endfor%}
+{% endblock egypt_cases %}
+
+{% block egypt_new_cases %}
+{% for x in new_data[2:] %}
+    {% if x[2] == 'Egypt' %}
+        <td class="text-center" >{{x[4]}}</td>
+        <td></td>
+    {%endif%}
+    {%endfor%}
+{% endblock egypt_new_cases %}
+
+{% block egypt_hell %}
+{% for x in new_data[2:] %}
+    {% if x[2] == 'Egypt' %}
+        <td class="text-center" >{{x[7]}}</td>
+        <td></td>
+    {%endif%}
+    {%endfor%}
+{% endblock egypt_hell %}
+
+{% block egypt_death %}
+{% for x in new_data[2:] %}
+    {% if x[2] == 'Egypt' %}
+        {%if x[5]%}
+            <td class="invalid text-center" >{{x[6]}}</td>
+            <td class="text-danger text-center font_181 blinking" style="max-width: 20px;">{{x[5]}}</td>
+        {%else%}
+            <td class="invalid text-center" >{{x[6]}}</td>
+            <td></td>
+        {%endif%}
+    {%endif%}
+    {%endfor%}
+{% endblock egypt_death %}
+
+
+
+
+
+
+<!---'Eritrea'------>
+
+{% block eritrea_cases %}
+    {% for x in new_data[2:] %}
+    {% if x[2] == 'Eritrea' %}
+        <td class="text-center" >{{x[3]}}</td>
+        <td></td>
+    {%endif%}
+    {%endfor%}
+{% endblock eritrea_cases %}
+
+{% block eritrea_new_cases %}
+{% for x in new_data[2:] %}
+    {% if x[2] == 'Eritrea' %}
+        <td class="text-center" >{{x[4]}}</td>
+        <td></td>
+    {%endif%}
+    {%endfor%}
+{% endblock eritrea_new_cases %}
+
+{% block eritrea_hell %}
+{% for x in new_data[2:] %}
+    {% if x[2] == 'Eritrea' %}
+        <td class="text-center" >{{x[7]}}</td>
+        <td></td>
+    {%endif%}
+    {%endfor%}
+{% endblock eritrea_hell %}
+
+{% block eritrea_death %}
+{% for x in new_data[2:] %}
+    {% if x[2] == 'Eritrea' %}
+        {%if x[5]%}
+            <td class="invalid text-center" >{{x[6]}}</td>
+            <td class="text-danger text-center font_181 blinking" style="max-width: 20px;">{{x[5]}}</td>
+        {%else%}
+            <td class="invalid text-center" >{{x[6]}}</td>
+            <td></td>
+        {%endif%}
+    {%endif%}
+    {%endfor%}
+{% endblock eritrea_death %}
+
+
+
+
+
+
+<!---'Ethiopia'------>
+
+{% block ethiopia_cases %}
+    {% for x in new_data[2:] %}
+    {% if x[2] == 'Ethiopia' %}
+        <td class="text-center" >{{x[3]}}</td>
+        <td></td>
+    {%endif%}
+    {%endfor%}
+{% endblock ethiopia_cases %}
+
+{% block ethiopia_new_cases %}
+{% for x in new_data[2:] %}
+    {% if x[2] == 'Ethiopia' %}
+        <td class="text-center" >{{x[4]}}</td>
+        <td></td>
+    {%endif%}
+    {%endfor%}
+{% endblock ethiopia_new_cases %}
+
+{% block ethiopia_hell %}
+{% for x in new_data[2:] %}
+    {% if x[2] == 'Ethiopia' %}
+        <td class="text-center" >{{x[7]}}</td>
+        <td></td>
+    {%endif%}
+    {%endfor%}
+{% endblock ethiopia_hell %}
+
+{% block ethiopia_death %}
+{% for x in new_data[2:] %}
+    {% if x[2] == 'Ethiopia' %}
+        {%if x[5]%}
+            <td class="invalid text-center" >{{x[6]}}</td>
+            <td class="text-danger text-center font_181 blinking" style="max-width: 20px;">{{x[5]}}</td>
+        {%else%}
+            <td class="invalid text-center" >{{x[6]}}</td>
+            <td></td>
+        {%endif%}
+    {%endif%}
+    {%endfor%}
+{% endblock ethiopia_death %}
+
