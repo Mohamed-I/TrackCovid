@@ -1,6 +1,5 @@
-# OSHD
+# TrackCovid
 
-THIS PRODUCT IS IN THE EARLIEST STAGE OF THE DEVOLOPMENT.
 
 ## Front end
     html, css, js
