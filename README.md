@@ -1,4 +1,4 @@
-# TrackCovid
+# Covid Tracker
 
 
 ## Front end
