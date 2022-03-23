@@ -3,7 +3,7 @@
 {% block content %}
     {% for x in new_data[1:] %}
         {% if x[2] not in countries%}
-            <tbody >
+            <tbody>
                 <tr class="text-right">
                     <td class="font_18">{{ x[10] }}</td>                                                            <!--- TotalTests ---->
                     <td class="font_18">{{ x[9] }}</td>                                                             <!--- Serious ---->
@@ -12,8 +12,8 @@
                     <td class="text-danger font_18" >{{ x[6] }}</td>                                                <!--- TotalDeaths ---->
                     <td class="text-danger font_181 blinking" >{{ x[5] }}</td>                                      <!--- NewDeaths ---->
                     <td class="font_18">{{ x[4] }}</td>                                                             <!--- NewCases ---->
-                    <td class="font_18">{{ x[3] }}</td>                                               <!--- TotalCases---->
-                    <td class="text-right" style="font-weight: bold; color: #5a64d1;">{{ x[2] }}</td>               <!--- Country---->
+                    <td class="font_18">{{ x[3] }}</td>                                                             <!--- TotalCases---->
+                    <td class="text-right" style="font-weight: bold; color: #5a64d1;">{{ x[2] }}</td>             <!--- Country---->
                  </tr>
             </tbody>
         {%endif%}
@@ -21,6 +21,7 @@
 {% endblock %}
 
 
+<!---'Sudan'------>
 
 {% block sudan_cases %}
     {% for x in new_data[2:] %}

@@ -1,3 +1,19 @@
+body{
+    overflow: hidden;
+}
+
+.container-outer{
+    margin: 3rem 4rem;
+}
+
+.container-inner{
+    padding: 0 5rem;
+}
+
+.right-container{
+    padding-bottom: 3rem;
+}
+
 .c_text1{
     color: white;
     padding-top: 10px;
@@ -37,7 +53,7 @@
 }
 
 .all_background {
-    background: black;
+    background: rgb(68, 68, 68);
     opacity: 0.7;
 }
 
@@ -61,7 +77,7 @@ margin: 0px;
     font-weight: bold;
     position: absolute;
     top: 50px;
-    right: 0px
+    right: 0px;
     margin: 0px;
     padding: 0px;
 }
@@ -126,9 +142,9 @@ margin: 0px;
     font-weight: bold;
     position: absolute;
     top: 65px;
-    right: 0px
+    right: 0px;
     margin: 0px;
-    padding: 0px;
+    padding: 0rem 2rem;
 }
 
 .blinking{ animation:blinkingText 1.2s infinite; }

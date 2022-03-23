@@ -1,302 +1,301 @@
 <!DOCTYPE html>
 <html lang="arabic">
-    <head>
-        <title>Coronavirus</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css">
-        <link rel="stylesheet" type="text/css" href="static/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Rokkitt:wght@100;200;300;900&display=swap" rel="stylesheet">
-        <meta http-equiv="refresh" content="180" >
-        <script>
-            function startTime() {
-            var today = new Date();
-              var h = today.getHours();
-              var m = today.getMinutes();
-              var s = today.getSeconds();
-              m = checkTime(m);
-              s = checkTime(s);
-              document.getElementById('t_time').innerHTML =  h + ":" + m + ":" + s;
-              var t = setTimeout(startTime, 500);
-              document.getElementById("d_date").innerHTML = today.toLocaleDateString();
-            }
+<head>
+    <title>Coronavirus</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css">
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Rokkitt:wght@100;200;300;900&display=swap" rel="stylesheet">
+    <meta http-equiv="refresh" content="180" >
+    <script>
+        function startTime() {
+        var today = new Date();
+          var h = today.getHours();
+          var m = today.getMinutes();
+          var s = today.getSeconds();
+          m = checkTime(m);
+          s = checkTime(s);
+          document.getElementById('t_time').innerHTML =  h + ":" + m + ":" + s;
+          var t = setTimeout(startTime, 500);
+          document.getElementById("d_date").innerHTML = today.toLocaleDateString();
+        }
 
-            function checkTime(i) {
-              if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-              return i; }
-        </script>
+        function checkTime(i) {
+          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+          return i; }
+    </script>
 
-    </head>
-    <body onload="startTime()"  style="background-image: url('static/images/glob.png');">
-        <div class="container">
-            <div style="margin-top: 20px; margin-right: 20px; color: white; background:black; opacity: .8;">
-                <div class="container" style="max-height: 100px;">
-                    <div class="row tx" >
-                        <div class="col-sm-2 text-center"><img class="w-100" src="static/images/logo.png" style="max-height: 1550px; max-width: 100px;"></div>
-                        <div class="col-sm-8 text-center" style="max-height: 150px;">
-                            <h3 class="c_text1" style="max-height: 50px;">COVID-19 فيروس كرونا </h3>
-                            <h5 style="min-height: 40px; font-family: 'KacstOne', serif;"> عرض تطورات الفيروس على مستوى العالم وبيانات اعلى عشر دول بالاضافة للسودان والدول المجاورة</h5>
-                            <h6 class="c_text4" style="min-height: 30px;">
-                                تحديث البيانات كل ثلاث دقائق
-                                <span id="c_text2" class="blinking" style="max-height:30px;">Live</span>
-                            </h6>
+</head>
+<body onload="startTime()"  style="background-image: url('static/images/glob.png'); padding:0px;">
+    <div class="container-outer">
+        <div style="margin: 0 padding-top: 20px; color: white; background:black; opacity: .8;">
+            <div class="container" style="max-height: 100px;">
+                <div class="row tx" >
+                    <div class="col-sm-2 text-center"><img class="w-100" src="static/images/logo.png" style="max-height: 1550px; max-width: 100px;"></div>
+                    <div class="col-sm-8 text-center" style="max-height: 150px;">
+                        <h3 class="c_text1" style="max-height: 50px;">COVID-19 فيروس كرونا </h3>
+                        <h5 style="min-height: 40px; font-family: 'KacstOne', serif;"> عرض تطورات الفيروس على مستوى العالم وبيانات اعلى عشر دول بالاضافة للسودان والدول المجاورة</h5>
+                        <h6 class="c_text4" style="min-height: 30px;">
+                            تحديث البيانات كل ثلاث دقائق
+                            <span id="c_text2" class="blinking" style="max-height:30px;">Live</span>
+                        </h6>
 
-                        </div>
-                        <div class="col-sm-2 text-center date_time">
-                            <span id="d_date"></span>
-                            <span id="t_time"></span>
-                        </div>
+                    </div>
+                    <div class="col-sm-2 text-center date_time">
+                        <span id="d_date"></span>
+                        <span id="t_time"></span>
                     </div>
                 </div>
-                <hr>
-                <div class="container">
-                    <div class="row">
-                        <!----- global table ------->
-                        <div class="col-sm-9 table-responsive text-white" style="top: 20px;">
-                            <table class="table table-sm text-white">
-                                <thead class="table_header_font text-right">
-                                  <tr>
-                                    <th>اجمالي الفحوصات</th>
-                                    <th>حالات متاخرة</th>
-                                    <th>حالات نشطة</th>
-                                    <th class="text-success">حالات شفاء</th>
-                                    <th class="text-danger">اجمالي الوفيات</th>
-                                    <th class="text-danger">وفيات جديدة</th>
-                                    <th>اصابات جديدة</th>
-                                    <th class="sorting">اجمالي الاصابات</th>
-                                    <th> الدولة واخرى</th>
-                                  </tr>
-                                </thead>
-                                {% block content %} {% endblock %}
-                            </table>
-                        </div>
-                        <!----- right container ------->
-                        <div class="col-sm-3 align-items-center" style="top: 30px;">
-                            <!----- sudan ------->
-                            <div style="padding-top:15px; max-height: 220px; max-width: 260px;">
-                                <img class="w-100" src="static/images/sudan.png" >
-                                <div id="tc7" class="container">
-                                    <table class="table table-sm" style="max-height: 150px; max-width: 245px;">
-                                      <tbody>
-                                        <tr>
-                                            {% block sudan_cases %} {% endblock sudan_cases %}
-                                          <td class="text-right">الاصابات</td>
-                                        </tr>
-                                        <tr>
-                                            {% block sudan_new_cases %} {% endblock sudan_new_cases %}
-                                          <td class="text-right">اصابات جديدة</td>
-                                        </tr>
-                                        <tr>
-                                            {% block sudan_hell %} {% endblock sudan_hell %}
-                                          <td class="text-right">حالات شفاء</td>
-                                        </tr>
-                                        <tr>
-                                            {% block sudan_death %} {% endblock sudan_death %}
-                                          <td class="text-right">حالات وفاة</td>
-                                        </tr>
-                                      </tbody>
-                                    </table>
-                                </div>
+            </div>
+            <hr>
+            <div class="container-inner">
+                <div class="row">
+                    <!----- global table ------->
+                    <div class="col-sm-9 table-responsive text-white" style="top: 20px;">
+                        <table class="table table-sm text-white">
+                            <thead class="table_header_font text-right">
+                              <tr>
+                                <th>اجمالي الفحوصات</th>
+                                <th>حالات متاخرة</th>
+                                <th>حالات نشطة</th>
+                                <th class="text-success">حالات شفاء</th>
+                                <th class="text-danger">اجمالي الوفيات</th>
+                                <th class="text-danger">وفيات جديدة</th>
+                                <th>اصابات جديدة</th>
+                                <th class="sorting">اجمالي الاصابات</th>
+                                <th> الدولة واخرى</th>
+                              </tr>
+                            </thead>
+                            {% block content %} {% endblock %}
+                        </table>
+                    </div>
+                    <!----- right container ------->
+                    <div class="col-sm-3 align-items-right right-container" style="top: 10px;">
+                        <!----- sudan ------->
+                        <div style="max-height: 250px; max-width: 400px;">
+                            <img class="w-100" src="static/images/sudan.png" >
+                            <div id="tc7" class="container">
+                                <table class="table table-sm " >
+                                  <tbody>
+                                    <tr>
+                                        {% block sudan_cases %} {% endblock sudan_cases %}
+                                      <td class="text-right">الاصابات</td>
+                                    </tr>
+                                    <tr>
+                                        {% block sudan_new_cases %} {% endblock sudan_new_cases %}
+                                      <td class="text-right">اصابات جديدة</td>
+                                    </tr>
+                                    <tr>
+                                        {% block sudan_hell %} {% endblock sudan_hell %}
+                                      <td class="text-right">حالات شفاء</td>
+                                    </tr>
+                                    <tr>
+                                        {% block sudan_death %} {% endblock sudan_death %}
+                                      <td class="text-right">حالات وفاة</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
                             </div>
-                            <hr style="max-height: 0px;">
-                            <!----- other countries ------->
-                            <div style="padding-bottom:15px;">
-                                  <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-                                      <!----- slider ------->
-                                      <div class="carousel-inner">
-                                          <!--- egypt --->
-                                          <div class="carousel-item active">
-                                                <img class="w-100" src="static/images/eg.png" >
-                                                <div id="tc" class="container">
-                                                    <table  class="table table-sm">
-                                                      <tbody >
-                                                        <tr>
-                                                          {% block egypt_cases %} {% endblock egypt_cases %}
-                                                          <td class="text-right">الاصابات</td>
-                                                        </tr>
-                                                        <tr>
-                                                          {% block egypt_new_cases %} {% endblock egypt_new_cases %}
-                                                          <td class="text-right">اصابات جديدة</td>
-                                                        </tr>
-                                                        <tr>
-                                                          {% block egypt_hell %} {% endblock egypt_hell %}
-                                                          <td class="text-right">حالات شفاء</td>
-                                                        </tr>
-                                                        <tr>
-                                                          {% block egypt_death %} {% endblock egypt_death %}
-                                                          <td class="text-right">حالات وفاة</td>
-                                                        </tr>
-                                                      </tbody>
-                                                    </table>
-                                                </div>
-                                          </div>
-                                          <!--- eritrea --->
-                                          <div class="carousel-item">
-                                                <img class="w-100" src="static/images/er.png">
-                                                <div id="tc1" class="container">
-                                                    <table class="table table-sm">
-                                                  <tbody>
+                        </div>
+                        <hr style="max-height: 10px;">
+                        <!----- other countries ------->
+                        <div style="padding-bottom:10px;">
+                              <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                                  <!----- slider ------->
+                                  <div class="carousel-inner">
+                                      <!--- egypt --->
+                                      <div class="carousel-item active">
+                                            <img class="w-100" src="static/images/eg.png" >
+                                            <div id="tc" class="container">
+                                                <table  class="table table-sm">
+                                                  <tbody >
                                                     <tr>
-                                                      {% block eritrea_cases %} {% endblock eritrea_cases %}
+                                                      {% block egypt_cases %} {% endblock egypt_cases %}
                                                       <td class="text-right">الاصابات</td>
                                                     </tr>
                                                     <tr>
-                                                      {% block eritrea_new_cases %} {% endblock eritrea_new_cases %}
+                                                      {% block egypt_new_cases %} {% endblock egypt_new_cases %}
                                                       <td class="text-right">اصابات جديدة</td>
                                                     </tr>
                                                     <tr>
-                                                      {% block eritrea_hell %} {% endblock eritrea_hell %}
+                                                      {% block egypt_hell %} {% endblock egypt_hell %}
                                                       <td class="text-right">حالات شفاء</td>
                                                     </tr>
                                                     <tr>
-                                                      {% block eritrea_death %} {% endblock eritrea_death %}
+                                                      {% block egypt_death %} {% endblock egypt_death %}
                                                       <td class="text-right">حالات وفاة</td>
                                                     </tr>
                                                   </tbody>
                                                 </table>
-                                                </div>
-                                          </div>
-                                          <!--- ethiopia --->
-                                          <div class="carousel-item">
-                                                <img class="w-100" src="static/images/eth.png">
-                                                <div id="tc2" class="container">
-                                                    <table class="table table-sm">
-                                                  <tbody>
-                                                    <tr>
-                                                      {% block ethiopia_cases %}{% endblock ethiopia_cases %}
-                                                      <td class="text-right">الاصابات</td>
-                                                    </tr>
-                                                    <tr>
-                                                      {% block ethiopia_new_cases %}{% endblock ethiopia_new_cases %}
-                                                      <td class="text-right">اصابات جديدة</td>
-                                                    </tr>
-                                                    <tr>
-                                                      {% block ethiopia_hell %}{% endblock ethiopia_hell %}
-                                                      <td class="text-right">حالات شفاء</td>
-                                                    </tr>
-                                                    <tr>
-                                                      {% block ethiopia_death %}{% endblock ethiopia_death %}
-                                                      <td class="text-right">حالات وفاة</td>
-                                                    </tr>
-                                                  </tbody>
-                                                </table>
-                                                </div>
-                                          </div>
-                                          <!--- south sudan --->
-                                          <div class="carousel-item">
-                                                <img class="w-100" src="static/images/ss.png">
-                                                <div id="tc3" class="container">
-                                                    <table class="table table-sm">
-                                                  <tbody>
-                                                    <tr>
-                                                      {% block south_sudan_cases %} {% endblock south_sudan_cases %}
-                                                      <td class="text-right">الاصابات</td>
-                                                    </tr>
-                                                    <tr>
-                                                      {% block south_sudan_new_cases %} {% endblock south_sudan_new_cases %}
-                                                      <td class="text-right">اصابات جديدة</td>
-                                                    </tr>
-                                                    <tr>
-                                                      {% block south_sudan_hell %} {% endblock south_sudan_hell %}
-                                                      <td class="text-right">حالات شفاء</td>
-                                                    </tr>
-                                                    <tr>
-                                                      {% block south_sudan_death %} {% endblock south_sudan_death %}
-                                                      <td class="text-right">حالات وفاة</td>
-                                                    </tr>
-                                                  </tbody>
-                                                </table>
-                                                </div>
-                                          </div>
-                                          <!--- car --->
-                                          <div class="carousel-item">
-                                                <img class="w-100" src="static/images/ca.png">
-                                                <div id="tc4" class="container">
-                                                    <table class="table table-sm">
-                                                  <tbody>
-                                                    <tr>
-                                                      {% block car_cases %} {% endblock car_cases %}
-                                                      <td class="text-right">الاصابات</td>
-                                                    </tr>
-                                                    <tr>
-                                                      {% block car_new_cases %} {% endblock car_new_cases %}
-                                                      <td class="text-right">اصابات جديدة</td>
-                                                    </tr>
-                                                    <tr>
-                                                      {% block car_hell %} {% endblock car_hell %}
-                                                      <td class="text-right">حالات شفاء</td>
-                                                    </tr>
-                                                    <tr>
-                                                      {% block car_death %} {% endblock car_death %}
-                                                      <td class="text-right">حالات وفاة</td>
-                                                    </tr>
-                                                  </tbody>
-                                                </table>
-                                                </div>
-                                          </div>
-                                          <!--- chad --->
-                                          <div class="carousel-item">
-                                                <img class="w-100" src="static/images/ch.png">
-                                                <div id="tc5" class="container">
-                                                    <table class="table table-sm">
-                                                  <tbody>
-                                                    <tr>
-                                                      {% block chad_cases %} {% endblock chad_cases %}
-                                                      <td class="text-right">الاصابات</td>
-                                                    </tr>
-                                                    <tr>
-                                                      {% block chad_new_cases %} {% endblock chad_new_cases %}
-                                                      <td class="text-right">اصابات جديدة</td>
-                                                    </tr>
-                                                    <tr>
-                                                      {% block chad_hell %} {% endblock chad_hell %}
-                                                      <td class="text-right">حالات شفاء</td>
-                                                    </tr>
-                                                    <tr>
-                                                      {% block chad_death %} {% endblock chad_death %}
-                                                      <td class="text-right">حالات وفاة</td>
-                                                    </tr>
-                                                  </tbody>
-                                                </table>
-                                                </div>
-                                          </div>
-                                          <!--- libya --->
-                                          <div class="carousel-item">
-                                                <img class="w-100" src="static/images/li.png">
-                                                <div id="tc6" class="container">
-                                                    <table class="table table-sm">
-                                                  <tbody>
-                                                    <tr>
-                                                      {% block libya_cases %} {% endblock libya_cases %}
-                                                      <td class="text-right">الاصابات</td>
-                                                    </tr>
-                                                    <tr>
-                                                      {% block libya_new_cases %} {% endblock libya_new_cases %}
-                                                      <td class="text-right">اصابات جديدة</td>
-                                                    </tr>
-                                                    <tr>
-                                                      {% block libya_hell %} {% endblock libya_hell %}
-                                                      <td class="text-right">حالات شفاء</td>
-                                                    </tr>
-                                                    <tr>
-                                                      {% block libya_death %} {% endblock libya_death %}
-                                                      <td class="text-right">حالات وفاة</td>
-                                                    </tr>
-                                                  </tbody>
-                                                </table>
-                                                </div>
-                                          </div>
+                                            </div>
+                                      </div>
+                                      <!--- eritrea --->
+                                      <div class="carousel-item">
+                                            <img class="w-100" src="static/images/er.png">
+                                            <div id="tc1" class="container">
+                                                <table class="table table-sm">
+                                              <tbody>
+                                                <tr>
+                                                  {% block eritrea_cases %} {% endblock eritrea_cases %}
+                                                  <td class="text-right">الاصابات</td>
+                                                </tr>
+                                                <tr>
+                                                  {% block eritrea_new_cases %} {% endblock eritrea_new_cases %}
+                                                  <td class="text-right">اصابات جديدة</td>
+                                                </tr>
+                                                <tr>
+                                                  {% block eritrea_hell %} {% endblock eritrea_hell %}
+                                                  <td class="text-right">حالات شفاء</td>
+                                                </tr>
+                                                <tr>
+                                                  {% block eritrea_death %} {% endblock eritrea_death %}
+                                                  <td class="text-right">حالات وفاة</td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                            </div>
+                                      </div>
+                                      <!--- ethiopia --->
+                                      <div class="carousel-item">
+                                            <img class="w-100" src="static/images/eth.png">
+                                            <div id="tc2" class="container">
+                                                <table class="table table-sm">
+                                              <tbody>
+                                                <tr>
+                                                  {% block ethiopia_cases %}{% endblock ethiopia_cases %}
+                                                  <td class="text-right">الاصابات</td>
+                                                </tr>
+                                                <tr>
+                                                  {% block ethiopia_new_cases %}{% endblock ethiopia_new_cases %}
+                                                  <td class="text-right">اصابات جديدة</td>
+                                                </tr>
+                                                <tr>
+                                                  {% block ethiopia_hell %}{% endblock ethiopia_hell %}
+                                                  <td class="text-right">حالات شفاء</td>
+                                                </tr>
+                                                <tr>
+                                                  {% block ethiopia_death %}{% endblock ethiopia_death %}
+                                                  <td class="text-right">حالات وفاة</td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                            </div>
+                                      </div>
+                                      <!--- south sudan --->
+                                      <div class="carousel-item">
+                                            <img class="w-100" src="static/images/ss.png">
+                                            <div id="tc3" class="container">
+                                                <table class="table table-sm">
+                                              <tbody>
+                                                <tr>
+                                                  {% block south_sudan_cases %} {% endblock south_sudan_cases %}
+                                                  <td class="text-right">الاصابات</td>
+                                                </tr>
+                                                <tr>
+                                                  {% block south_sudan_new_cases %} {% endblock south_sudan_new_cases %}
+                                                  <td class="text-right">اصابات جديدة</td>
+                                                </tr>
+                                                <tr>
+                                                  {% block south_sudan_hell %} {% endblock south_sudan_hell %}
+                                                  <td class="text-right">حالات شفاء</td>
+                                                </tr>
+                                                <tr>
+                                                  {% block south_sudan_death %} {% endblock south_sudan_death %}
+                                                  <td class="text-right">حالات وفاة</td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                            </div>
+                                      </div>
+                                      <!--- car --->
+                                      <div class="carousel-item">
+                                            <img class="w-100" src="static/images/ca.png">
+                                            <div id="tc4" class="container">
+                                                <table class="table table-sm">
+                                              <tbody>
+                                                <tr>
+                                                  {% block car_cases %} {% endblock car_cases %}
+                                                  <td class="text-right">الاصابات</td>
+                                                </tr>
+                                                <tr>
+                                                  {% block car_new_cases %} {% endblock car_new_cases %}
+                                                  <td class="text-right">اصابات جديدة</td>
+                                                </tr>
+                                                <tr>
+                                                  {% block car_hell %} {% endblock car_hell %}
+                                                  <td class="text-right">حالات شفاء</td>
+                                                </tr>
+                                                <tr>
+                                                  {% block car_death %} {% endblock car_death %}
+                                                  <td class="text-right">حالات وفاة</td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                            </div>
+                                      </div>
+                                      <!--- chad --->
+                                      <div class="carousel-item">
+                                            <img class="w-100" src="static/images/ch.png">
+                                            <div id="tc5" class="container">
+                                                <table class="table table-sm">
+                                              <tbody>
+                                                <tr>
+                                                  {% block chad_cases %} {% endblock chad_cases %}
+                                                  <td class="text-right">الاصابات</td>
+                                                </tr>
+                                                <tr>
+                                                  {% block chad_new_cases %} {% endblock chad_new_cases %}
+                                                  <td class="text-right">اصابات جديدة</td>
+                                                </tr>
+                                                <tr>
+                                                  {% block chad_hell %} {% endblock chad_hell %}
+                                                  <td class="text-right">حالات شفاء</td>
+                                                </tr>
+                                                <tr>
+                                                  {% block chad_death %} {% endblock chad_death %}
+                                                  <td class="text-right">حالات وفاة</td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                            </div>
+                                      </div>
+                                      <!--- libya --->
+                                      <div class="carousel-item">
+                                            <img class="w-100" src="static/images/li.png">
+                                            <div id="tc6" class="container">
+                                                <table class="table table-sm">
+                                              <tbody>
+                                                <tr>
+                                                  {% block libya_cases %} {% endblock libya_cases %}
+                                                  <td class="text-right">الاصابات</td>
+                                                </tr>
+                                                <tr>
+                                                  {% block libya_new_cases %} {% endblock libya_new_cases %}
+                                                  <td class="text-right">اصابات جديدة</td>
+                                                </tr>
+                                                <tr>
+                                                  {% block libya_hell %} {% endblock libya_hell %}
+                                                  <td class="text-right">حالات شفاء</td>
+                                                </tr>
+                                                <tr>
+                                                  {% block libya_death %} {% endblock libya_death %}
+                                                  <td class="text-right">حالات وفاة</td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                            </div>
                                       </div>
                                   </div>
-                            </div>
+                              </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    </body>
+    </div>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
 </html>
